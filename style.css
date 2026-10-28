@@ -4,13 +4,18 @@
   /* Margem externa (da borda para fora) */
   padding: 0;
   /* Margem interna (da borda para dentro) */
+  box-sizing: border-box;
+  /*
+  content-box: soma todosos espaços e expande
+  border-box: soma todos os espaços e reduz (conteúdo + espaços)
+  */
 }
 
 /* Variáveis para a paleta de cores */
 :root {
   --cor-marrom-escuro: #4e342e;
   --cor-titulo: bisque;
-  --cor-marrom-claro: #b07d52;
+  --cor-marrom-claro: #b07d52; /* (marrom-medio) */
   --cor-fundo-pagina: #f5efe6;
   --cor-fundo-secao: #ffffff;
   --cor-sombra: rgba(0, 0, 0, 0.2);
@@ -19,6 +24,7 @@
   --cor-fundo-dica: #fff8e1;
   --cor-borda-dica: #f0ad4e;
   --cor-borda-tabela: #e0d3c4;
+  --cor-marrom-hover: #935f3a;
 }
 
 
@@ -71,6 +77,17 @@ nav {
   padding: 12px;
 }
 
+nav a {
+  color: var(--cor-fonte-clara);
+  text-decoration: none;
+  padding: 8px 14px;
+  border-radius: 6px;
+}
+
+nav a:hover {
+  background-color: var(--cor-marrom-hover);
+}
+
 section {
   margin-top: 30px;
   padding: 30px;
@@ -85,6 +102,13 @@ desfoque
 */
 }
 
+section img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 10px;
+}
+
 section h2 {
   color: var(--cor-marrom-escuro);
   border-bottom: 3px solid var(--cor-marrom-claro);
@@ -97,6 +121,20 @@ section p {
   line-height: 150%;
 }
 
+section ul, section ol {
+  margin-left: 24px;
+  margin-bottom: 12px;
+}
+
+section li {
+  margin-bottom: 5px;
+}
+
+section hr {
+  border-top: 2px dotted var(--cor-marrom-claro);
+  margin: 10px 0px;
+}
+
 /* Criar uma classe no CSS */
 .dica {
   background-color: var(--cor-fundo-dica);
@@ -104,6 +142,15 @@ section p {
   /* padding-left: +5px; */
   padding: 15px 18px;
   border-radius: 5px;
+}
+
+.horario-funcionamento th {
+  border: none;
+}
+
+.horario-funcionamento td {
+border: none;
+border-bottom: 1px solid var(--cor-borda-tabela);
 }
 
 /* FORMATAÇÃO DA TABELA */
@@ -119,6 +166,35 @@ th, td{
 th{
   background-color: var(--cor-marrom-escuro);
   color: var(--cor-fonte-clara);
+}
+
+/* Formatação do formulário */
+
+form label {
+  display: block; /* Transforma a tag em um bloco. Antes label era inline */
+  margin: 10px 0px 4px;
+  color: var(--cor-marrom-escuro);
+}
+
+form input, form textarea {
+  width: 100%;
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid var(--cor-borda-tabela);
+}
+
+form button {
+  margin-top: 15px;
+  border: none;
+  background-color: var(--cor-marrom-claro);
+  color: var(--cor-fonte-clara);
+  padding: 12px 24px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+form button:hover {
+  background-color: var(--cor-marrom-hover);
 }
 
 @font-face {
