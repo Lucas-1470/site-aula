@@ -151,6 +151,7 @@ section hr {
 .horario-funcionamento td {
 border: none;
 border-bottom: 1px solid var(--cor-borda-tabela);
+text-align: center;
 }
 
 /* FORMATAÇÃO DA TABELA */
@@ -195,6 +196,35 @@ form button {
 
 form button:hover {
   background-color: var(--cor-marrom-hover);
+}
+
+/* Formatação da seção Delivery usando o ID */
+
+#delivery {
+  text-align: center;
+  padding: 40px 20px;
+  background: linear-gradient(120deg, var(--cor-marrom-escuro), var(--cor-marrom-claro));
+  color: var(--cor-fonte-clara);
+}
+
+#delivery h2 {
+  margin-bottom: 10px;
+  border-bottom: none;
+  color: var(--cor-fonte-clara);
+}
+
+.botao {
+  background-color: var(--cor-fonte-clara);
+  color: var(--cor-marrom-escuro);
+  text-decoration: none;
+  padding: 15px 30px;
+  border-radius: 30px;
+  display: inline-block; /* Combina comportamento imline com block */
+}
+
+.botao:hover {
+  /* transform: translate3D(3px, 3px, 3px); */
+  background-color: #25D366;
 }
 
 @font-face {
