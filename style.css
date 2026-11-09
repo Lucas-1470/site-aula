@@ -15,7 +15,7 @@
 :root {
   --cor-marrom-escuro: #4e342e;
   --cor-titulo: bisque;
-  --cor-marrom-claro: #b07d52; /* (marrom-medio) */
+  --cor-marrom-medio: #b07d52; /* (marrom-medio) */
   --cor-fundo-pagina: #f5efe6;
   --cor-fundo-secao: #ffffff;
   --cor-sombra: rgba(0, 0, 0, 0.2);
@@ -71,10 +71,14 @@ p {
 
 /**/
 nav {
-  background-color: var(--cor-marrom-claro);
+  background-color: var(--cor-marrom-medio);
   text-align: center;
   /*margin: 10px; /* (Up,Right,Down,Left) */
   padding: 12px;
+
+  position: sticky;
+  top: 0px;
+  z-index: 1000;
 }
 
 nav a {
@@ -111,7 +115,7 @@ section img {
 
 section h2 {
   color: var(--cor-marrom-escuro);
-  border-bottom: 3px solid var(--cor-marrom-claro);
+  border-bottom: 3px solid var(--cor-marrom-medio);
   margin-bottom: 15px;
   padding-bottom: 8px;
 }
@@ -131,7 +135,7 @@ section li {
 }
 
 section hr {
-  border-top: 2px dotted var(--cor-marrom-claro);
+  border-top: 2px dotted var(--cor-marrom-medio);
   margin: 10px 0px;
 }
 
@@ -187,7 +191,7 @@ form input, form textarea {
 form button {
   margin-top: 15px;
   border: none;
-  background-color: var(--cor-marrom-claro);
+  background-color: var(--cor-marrom-medio);
   color: var(--cor-fonte-clara);
   padding: 12px 24px;
   border-radius: 6px;
@@ -203,7 +207,7 @@ form button:hover {
 #delivery {
   text-align: center;
   padding: 40px 20px;
-  background: linear-gradient(120deg, var(--cor-marrom-escuro), var(--cor-marrom-claro));
+  background: linear-gradient(120deg, var(--cor-marrom-escuro), var(--cor-marrom-medio));
   color: var(--cor-fonte-clara);
 }
 

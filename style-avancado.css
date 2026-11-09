@@ -1,0 +1,49 @@
+:root {
+    --cor-fundo-experiencias: #faf6f0
+}
+
+/* Cabeçalho animado */
+
+.topo-animado h1, .topo-animado p {
+    animation: surgir 0.9s ease-out both;
+
+    /* 
+        surgir: Nome do keyframe (abaixo)
+        0.9s: Duração da animação
+        ease-out: Começa mais rápidamente e termina desacelerando
+        both: Aplica os estilos iniciais e mantém no final
+    */
+}
+
+.topo-animado p {
+    animation-delay: 0.3s;
+    /* O parágrafo começa a animação mais tardia */
+}
+
+@keyframes surgir {
+    from {
+        opacity: 0;                     /* inicia transparente */
+        transform: translateY(20px);    /* desloca o elemento 20 pixels para baixo */
+    }
+    to {
+        opacity: 1;                     /* totalmente visível */
+        transform: translateY(0);       /* o elemento rertorna a posição inicial */
+    }
+}
+
+/* Seção diferenciais - uso do flexbox */
+
+.diferenciais {
+    display: flex;
+    gap: 20px;
+}
+
+.diferencial {
+    flex: 1;
+    background-color: var(--cor-fundo-experiencias);
+    border: 1px solid var(--cor-borda-tabela);
+    border-top: 4px solid var(--cor-marrom-medio);
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+}
