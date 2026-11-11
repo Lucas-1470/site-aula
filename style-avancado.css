@@ -1,3 +1,5 @@
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.2/font/bootstrap-icons.min.css");
+
 :root {
     --cor-fundo-experiencias: #faf6f0
 }
@@ -33,11 +35,13 @@
 
 /* Seção diferenciais - uso do flexbox */
 
+/* No flexbox, esta regra é para o elemento pai */
 .diferenciais {
     display: flex;
     gap: 20px;
 }
 
+/* No flexbox, esta regra é para o elemento filho */
 .diferencial {
     flex: 1;
     background-color: var(--cor-fundo-experiencias);
@@ -46,4 +50,42 @@
     border-radius: 10px;
     padding: 20px;
     text-align: center;
+}
+
+/* Incluir e formatar os ícones */
+/* ::before é um pseudo-elemento - atua sobre uma parte específica de uma tag html */
+.diferencial::before {
+    font-family: "bootstrap-icons";
+    font-size: 2.2rem;
+    color: var(--cor-marrom-medio);
+    display: block;
+    margin-bottom: 10px;
+}
+
+.icone-grao::before {
+    content: "\F3CD";
+}
+.icone-fogo::before {
+    content: "\F7F6";
+}
+.icone-wifi::before {
+    content: "\F61C";
+    font-weight: bold;
+}
+
+/* Regras para layout responsivo */
+/* media-query */
+@media (max-width: 600px){
+
+    h1 {
+        font-size: 24px;
+    }
+
+    header p {
+        font-size: 15px;
+    }
+
+    .diferenciais{
+        flex-direction: column;
+    }
 }

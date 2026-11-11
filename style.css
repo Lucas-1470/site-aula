@@ -30,7 +30,7 @@
 
 /* Regra de formatação */
 main {
-  width: 900px;
+  max-width: 900px; /* <----- Mudei de width para max-width */
   /* Largura de um bloco (tag) */
   margin: 0px auto;
   /* text-align: center;     <---- */
