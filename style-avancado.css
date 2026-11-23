@@ -4,6 +4,8 @@
     --cor-fundo-experiencias: #faf6f0;
     --cor-fundo-etiqueta: #e53935;
     --cor-fundo-vegano: #2e7d32;
+    --cor-fundo-depoimento: #faf6f0;
+    --cor-fundo2-depoimento: #e8d3bd;
 }
 
 /* Cabeçalho animado */
@@ -179,6 +181,89 @@
 }
 
 
+
+/* Formatação de vídeo no youtube */
+.video-youtube{
+    /* Mantém a proporção 16:9 em qualquer largura da tela */
+    aspect-ratio: 16 / 9;
+    margin-bottom: 10px;
+}
+
+.video-youtube iframe{
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+
+/* Formatação da equipe */
+.equipe{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+}
+.membro{
+    text-align: center;
+    width: 150px;
+}
+.membro img{
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+
+    display: block;
+    margin: 0 auto;
+}
+
+
+/* Formatação dos depoimentos */
+.depoimentos{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+.depoimento{
+    position: relative;
+    background-color: var(--cor-fundo-depoimento);
+    border-radius: 10px;
+    padding: 35px 20px 20px;
+}
+/* 
+nth-child identifica elementos de uma lista de flihos
+odd: aplica em elementos ímpar (1,3)
+even: aplica em elementos par (2,4)
+*/
+.depoimento:nth-child(even){
+    background-color: var(--cor-fundo2-depoimento);
+}
+.depoimento::before{
+    content: "\F6B0";
+    position: absolute;
+    top: 0;
+    left: 14px;
+    font-family: bootstrap-icons;
+    font-size: 2.4rem;
+    color: var(--cor-marrom-medio);
+    line-height: 1;
+}
+cite{
+    font-weight: bold;
+    font-size: 0.9rem;
+    color: var(--cor-marrom-medio);
+}
+
+/* Formatação do footer */
+footer{
+    background-color: var(--cor-marrom-medio);
+    color: var(--cor-fonte-clara);
+    text-align: center;
+    padding: 24px 20px;
+    font-size: 0.9rem;
+    margin-top: 10px;
+}
+
+
 /* Regras para layout responsivo */
 /* media-query */
 @media (max-width: 600px){
@@ -193,5 +278,21 @@
 
     .diferenciais{
         flex-direction: column;
+    }
+
+    .produtos{
+        grid-template-columns: auto;
+    }
+
+    .equipe{
+        gap: 10px;
+        justify-content: space-evenly;
+    }
+    .membro{
+    border: 1px solid var(--cor-borda-tabela);
+    }
+    .membro img{
+        width: 60px;
+        height: 60px;
     }
 }
